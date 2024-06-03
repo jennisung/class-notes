@@ -1,4 +1,4 @@
-# Question 1: Java Program to Print a Specific Pattern
+# Question 1: Print a Specific Pattern
 
 Write a program that outputs the pattern shown below, ending with a newline. Each line of the pattern contains 5 characters including whitespace.
 
@@ -36,7 +36,7 @@ public class LabProgram {
 }
 ```
 
-# Question 2: Java Program to Multiply Numbers and Output Results
+# Question 2: Multiply Numbers and Output Results
 
 Write a program that collects two integer inputs and assigns them to the variables `starting_num` and `multiplier`. Multiply `starting_num` by `multiplier` and output the result. Repeat this process two more times, each time multiplying the previous result by `multiplier`. The three product outputs should be separated by a whitespace character, ending with a newline.
 
@@ -150,4 +150,45 @@ public class LabProgram {
         System.out.println(output);
     }
 }
+```
+
+# Question 3: Wedding table
+
+Write a program that calculates the number of full tables for a wedding event, based on the number of expected guests. Each full table will seat 10 wedding guests.
+
+Collect one integer input and assign it to the variable `guests`. Using integer division, calculate the total number of tables that will be filled. The variable `tableSize` has been declared and initialized, and the variables `guests` and `tablesFilled` have been declared in the template code.
+
+Output the number of tables filled, ending with a newline. Ensure your program output matches the example formatting below and works for a variety of input values.
+
+## If the Input: 
+340
+
+## the output is:
+Tables filled: 34
+
+
+
+### Solution
+
+```java
+import java.util.Scanner;
+
+public class LabProgram {
+    public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+        
+        // Initialize table size
+        int tableSize = 10;
+        
+        // Collect input for the number of guests
+        int guests = Integer.valueOf(scnr.nextLine());
+        
+        // Calculate the number of full tables
+        int tablesFilled = guests / tableSize;
+        
+        // Output the number of tables filled
+        System.out.println("Tables filled: " + tablesFilled);
+    }
+}
+
 ```
