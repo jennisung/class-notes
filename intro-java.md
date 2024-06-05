@@ -279,3 +279,51 @@ public class LabProgram {
 }
 ```
 
+# Question 6: Name Formatting Program
+
+Write a program that collects a full name as one string input.
+
+Format and output the name as shown below:
+
+`lastInitial., firstName middleInitial.`
+
+If no middle name was provided, format and output the name as shown below:
+
+`lastInitial., firstName`
+
+#### If the Input is:
+
+```
+Pat Silly Doe
+```
+#### the output is:
+
+```
+D., Pat S.
+```
+
+
+### Solution
+
+```java
+import java.util.Scanner;
+
+public class LabProgram {
+    public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+        String full_name = scnr.nextLine();
+        String[] parts = full_name.split(" ");
+        String first_name = parts[0];
+        String last_name = parts[parts.length - 1];
+        String final_name = last_name.substring(0, 1) + "., " + first_name;
+        
+        if (parts.length > 2) {
+            String middle = parts[1].substring(0, 1);
+            final_name += " " + middle + ".";
+        }
+        
+        System.out.println(final_name);
+    }
+}
+
+```
