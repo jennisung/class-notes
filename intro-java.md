@@ -229,3 +229,53 @@ public class LabProgram {
 
 ```
 
+# Question 5: Divisible by 3
+
+A number is divisible by 3 if the sum of its digits is divisible by 3. For example, 153 is divisible by 3 because 1 + 5 + 3 = 9 and 9 is divisible by 3.
+
+Write a program that collects three integer inputs representing the place values of a three-digit number. Determines whether the sum of the digits is divisible by 3. If any integer entered is a negative value, output `Invalid input!`
+
+Output a formatted message identifying if the three-digit number is divisible by 3, ending with a newline. Ensure your program output matches the example formatting below and works for a variety of input values.
+
+#### If the Input is:
+
+```
+1
+5
+3
+```
+#### the output is:
+
+```
+153 is divisible by 3!
+```
+### Solution
+
+```java
+import java.util.Scanner;
+
+public class LabProgram {
+    public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+
+        String one = scnr.nextLine();
+        String two = scnr.nextLine();
+        String three = scnr.nextLine();
+        String sum = one + two + three;
+
+        if (Integer.valueOf(one) < 0 || Integer.valueOf(two) < 0 || Integer.valueOf(three) < 0) {
+            System.out.println("Invalid input!");
+            return;
+        }
+
+        int total = Integer.valueOf(sum);
+        
+        if (total % 3 == 0) {
+            System.out.println(sum + " is divisible by 3!");
+        } else {
+            System.out.println(sum + " is not divisible by 3!");
+        }
+    }
+}
+```
+
