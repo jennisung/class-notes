@@ -59,10 +59,10 @@ public class LabProgram {
         Scanner scnr = new Scanner(System.in);
         
         // Collect inputs
-        int startingNum = scnr.nextInt();
+        int starting_num = scnr.nextInt();
         int multiplier = scnr.nextInt();
         
-        int result = startingNum;
+        int result = starting_num;
         String output = "";
         
         // Calculate and format the output
