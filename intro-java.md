@@ -327,3 +327,64 @@ public class LabProgram {
 }
 
 ```
+
+
+
+# Question 7: Name Formatting Program
+
+Write a program that collects any number of non-negative integer inputs and calculates the sum of the values. A negative integer should end the input collection and is not part of the sum.
+
+Output the smallest non-negative value and the sum of the non-negative input values, ending with a newline. Ensure your program output matches the example formatting below and works for a variety of input values.
+
+#### If the Input is:
+
+```
+15
+
+20
+
+0
+
+3
+
+-1
+```
+#### the output is:
+
+```
+Smallest: 0
+
+Sum: 38
+```
+
+### Solution
+
+```java
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);      
+      /* Type your code here. */
+      int smallest = Integer.MAX_VALUE;
+      int sum = 0;
+      
+      while (true){
+         int num = scnr.nextInt();
+         
+         if (num < 0){
+            break;
+         }
+         
+         sum += num;
+         
+         if (num < smallest){
+            smallest = num;
+         }
+      }
+      System.out.println("Smallest: " + smallest);
+      System.out.println("Sum: " + sum);
+   }
+}
+
+```
